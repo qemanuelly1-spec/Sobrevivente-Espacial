@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 307c53c406f403641a5ee06646bf509a
+guid: 15cecafa9a1534f49942f18b0436a65b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4071199407013758718
-    second: nuvem_layer02_0
+      213: 7741917557812130267
+    second: nuvem_layer01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -40,9 +40,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -55,9 +55,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nuvem_layer02_0
+      name: nuvem_layer01_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 240
-        height: 109
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef606d06a4ecf7830800000000000000
-      internalID: 4071199407013758718
+      spriteID: bd170c91001d07b60800000000000000
+      internalID: 7741917557812130267
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nuvem_layer02_0: 4071199407013758718
+      nuvem_layer01_0: 7741917557812130267
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
