@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class Teclado : MonoBehaviour
 {
     public bool cima;
@@ -10,28 +11,22 @@ public class Teclado : MonoBehaviour
     public bool x;
     public bool espaco;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Keyboard.current == null)
         {
-            Debug.Log("Keyboard.current é null");
             return;
         }
-        cima = Keyboard.current.upArrowKey.isPressed;
-        baixo = Keyboard.current.downArrowKey.isPressed;
-        esquerda = Keyboard.current.leftArrowKey.isPressed;
-        direita = Keyboard.current.rightArrowKey.isPressed;
-        z = Keyboard.current.zKey.isPressed;
-        x = Keyboard.current.xKey.isPressed;
-        espaco = Keyboard.current.spaceKey.isPressed;
 
-        
+        var k = Keyboard.current;
+
+        cima     = k.upArrowKey.isPressed    || k.wKey.isPressed;
+        baixo    = k.downArrowKey.isPressed  || k.sKey.isPressed;
+        esquerda = k.leftArrowKey.isPressed  || k.aKey.isPressed;
+        direita  = k.rightArrowKey.isPressed || k.dKey.isPressed;
+
+        z = k.zKey.isPressed;
+        x = k.xKey.isPressed;
+        espaco = k.spaceKey.isPressed;
     }
 }

@@ -3,26 +3,27 @@ using UnityEngine;
 public class Nave : MonoBehaviour
 {
     public float velocidade = 5f;
+    private Teclado teclado;
+
+    void Start()
+    {
+        teclado = GetComponent<Teclado>();
+    }
 
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float h = (teclado.direita ? 1 : 0) - (teclado.esquerda ? 1 : 0);
+        float v = (teclado.cima ? 1 : 0) - (teclado.baixo ? 1 : 0);
 
-        Vector3 movimento = new Vector3(horizontal, vertical, 0);
-
-        transform.position += movimento * velocidade * Time.deltaTime;
-
+        transform.position += new Vector3(h, v, 0) * velocidade * Time.deltaTime;
         LimitarMovimento();
     }
 
     void LimitarMovimento()
     {
-        Vector3 posicao = transform.position;
-
-        posicao.x = Mathf.Clamp(posicao.x, -8f, 8f);
-        posicao.y = Mathf.Clamp(posicao.y, -4.5f, 4.5f);
-
-        transform.position = posicao;
+        Vector3 p = transform.position;
+        p.x = Mathf.Clamp(p.x, -8f, 8f);
+        p.y = Mathf.Clamp(p.y, -4.5f, 4.5f);
+        transform.position = p;
     }
 }
